@@ -1,0 +1,104 @@
+* {
+    padding: 0;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+aside img{
+    width: 100%;
+    border: red, 2px, solid;
+    padding: 2px;
+}
+
+aside{
+    grid-template-areas: "as";
+}
+
+header {
+    background-image: url('kepek/fejlec.jpg');
+    height: 550px;
+    color: red;
+    font-weight: bold;
+    font-family: cursive;
+    width: 80%;
+}
+
+header h2 {
+    margin-top: 60px;
+    text-align: center;
+}
+
+nav{
+    background-color: red;
+    height: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "nb";
+    width: 80%;
+}
+
+li {
+    border-top: 1, white;
+    border-bottom: 1, white;
+    word-spacing: 5px;
+    list-style: none;
+}
+
+a{
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+a:hover{
+    background-color: green;
+}
+
+article{
+    text-align: justify;
+    font-size: 10px;
+    grid-template-areas: "at";
+    padding: 10px;
+}
+
+article h3{
+    font-size: 15px;
+    color: #ff1a1a;
+    font-family: "Trebuchet MS", "Helvetica", "sans-serif";
+
+}
+
+article img {
+    float: right;
+    border-radius: 20px;
+    box-shadow: 10px, 10px;
+    max-width: 200px;
+}
+
+body {
+    background-image: url('kepek/hatter.jpg');
+    max-width: 1000px;
+}
+
+main {
+    width: 80%;
+    background-color: rgb(255, 255, 230);
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+footer{
+    background-color: red;
+    text-align: center;
+    color: white;
+    width: 80%;
+}
+
+@media screen and (max-width: 700px){
+    main{
+        grid-area:  "nb"
+                    "at"
+                    "as"
+        ;
+    }
+}
