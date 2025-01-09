@@ -10,10 +10,6 @@ aside img{
     padding: 2px;
 }
 
-aside{
-    grid-template-areas: "as";
-}
-
 header {
     background-image: url('kepek/fejlec.jpg');
     height: 550px;
@@ -30,11 +26,13 @@ header h2 {
 
 nav{
     background-color: red;
+    width: 80%;
+}
+
+ul{
     height: 50px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: "nb";
-    width: 80%;
 }
 
 li {
@@ -50,14 +48,13 @@ a{
     text-decoration: none;
 }
 
-a:hover{
+li:hover{
     background-color: green;
 }
 
 article{
     text-align: justify;
     font-size: 10px;
-    grid-template-areas: "at";
     padding: 10px;
 }
 
@@ -73,6 +70,7 @@ article img {
     border-radius: 20px;
     box-shadow: 10px, 10px;
     max-width: 200px;
+    box-shadow: 5px 5px;
 }
 
 body {
@@ -95,8 +93,23 @@ footer{
 }
 
 @media screen and (max-width: 700px){
+    article{
+        grid-area: at;
+    }
+    aside{
+        grid-area: as;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 80%;
+    }
+    nav{
+        grid-area: nb;
+    }
     main{
-        grid-area:  "nb"
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+                    "nb"
                     "at"
                     "as"
         ;
